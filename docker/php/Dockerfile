@@ -9,11 +9,5 @@ RUN apt-get update && apt-get install -y \
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-COPY composer.json composer.lock ./
-
-RUN composer install --no-scripts --no-autoloader
-
-RUN composer dump-autoload --optimize
-
 WORKDIR /var/www/testTask
 

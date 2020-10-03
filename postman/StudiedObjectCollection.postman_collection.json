@@ -1,0 +1,170 @@
+{
+	"info": {
+		"_postman_id": "7ff2f94c-2cc4-4356-8eda-6dd519ac3e0d",
+		"name": "StudiedObjectCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:80/studiedObject/1",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpZCI6IjI3MCIsImV4cCI6MTYwMTUzNDk2NSwibG9naW4iOiJlYmVsb3YiLCJvYmpfaWQiOiI3Iiwib3JnSWQiOiIxNCIsImxhYl9pZCI6IjEiLCJvcmdJZF9zdHJ1Y3R1cmUiOiIxOCIsInVzZXJfdmFyaWFibGVzIjoie1wib3JnXCI6XCJSSElcIixcImxpbmVcIjpcIlwifSIsImFjdGl2ZV9vcmdhbml6YXRpb25zX2lkcyI6IltcIjE0XCJdIiwiYWN0aXZlX29iamVjdHNfaWRzIjoiW1wiN1wiXSIsImFjdGl2ZV9vcmdhbml6YXRpb25zX3Bvc2l0aW9uc19pZHMiOiJbMThdIiwiYWN0aXZlX3RpdGxlX29iamVjdHNfaWRzIjoiW10iLCJpc3MiOiJ0bTEtdGVhbW9uZS03MjUucmV2aWV3LndlbGRib29rLnJ1In0.MIoMr0I9zFQPyjKKFUA2-pRCg7fZkfzv5Hj3Ew3KhDR3Vu6fG88Ib38AWWsTAl6zKEDnVvAzRqbeMnYaLNwKFyfPzlTyyO4JmxEgAPtzQSs4Iz0ks0Hsww6fhy5lgnEZvlcF91ysP4oUana8kbRmHZGDw06Gk5inSi_nMXZxJ_I",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:80/studiedObject/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"studiedObject",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:80/studiedObject/byList",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idList[]",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "idList[]",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "idList[]",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:80/studiedObject/byList",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"studiedObject",
+						"byList"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:80/studiedObject/1",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:80/studiedObject/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"studiedObject",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:80/studiedObject/edit",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:80/studiedObject/edit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"studiedObject",
+						"edit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:80/studiedObject/create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Test_1\",\r\n    \"positionPoints\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:80/studiedObject/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"studiedObject",
+						"create"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
