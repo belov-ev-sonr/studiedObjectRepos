@@ -26,7 +26,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:80/studiedObject/1",
+					"raw": "http://localhost:80/studiedObject/3",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -34,7 +34,7 @@
 					"port": "80",
 					"path": [
 						"studiedObject",
-						"1"
+						"3"
 					]
 				}
 			},
@@ -93,7 +93,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:80/studiedObject/1",
+					"raw": "http://localhost:80/studiedObject/2",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -101,7 +101,7 @@
 					"port": "80",
 					"path": [
 						"studiedObject",
-						"1"
+						"2"
 					]
 				}
 			},
@@ -114,7 +114,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{}",
+					"raw": "{\r\n    \"id\": 3,\r\n    \"name\": \"Test_3333\",\r\n    \"positionPoints\": [\r\n        {\r\n            \"x\": 100,\r\n            \"y\": 200\r\n        },\r\n        {\r\n            \"x\": 1022.3598,\r\n            \"y\": 23400.586\r\n        }\r\n    ]\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -143,7 +143,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Test_1\",\r\n    \"positionPoints\": []\r\n}",
+					"raw": "{\r\n    \"name\": \"Test_3\",\r\n    \"positionPoints\": [\r\n        {\r\n            \"x\": \"100\",\r\n            \"y\": \"200\"\r\n        },\r\n        {\r\n            \"x\": \"10.3598\",\r\n            \"y\": \"234.586\"\r\n        }\r\n    ]\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -160,6 +160,46 @@
 					"path": [
 						"studiedObject",
 						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:80/files/upload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "files",
+							"type": "file",
+							"src": "/C:/Users/ILIY_K/Desktop/test_upload.txt"
+						},
+						{
+							"key": "typeObject",
+							"value": "studiedObject",
+							"type": "text"
+						},
+						{
+							"key": "bindObjectId",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:80/files/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"files",
+						"upload"
 					]
 				}
 			},
